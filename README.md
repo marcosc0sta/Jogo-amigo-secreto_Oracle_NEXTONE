@@ -1,0 +1,1 @@
+# Jogo-amigo-secreto_Oracle_NEXTONE
