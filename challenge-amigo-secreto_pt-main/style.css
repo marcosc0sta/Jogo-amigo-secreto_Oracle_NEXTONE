@@ -1,0 +1,229 @@
+:root {
+    --color-primary: #6C5CE7;
+    --color-secondary: #F8F9FA;
+    --color-tertiary: #D63031;
+    --color-accent: #00CEC9;
+    --color-button: #FF7675;
+    --color-button-hover: #E74C3C;
+    --color-text: #2D3436;
+    --color-white: #FFFFFF;
+}
+
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text);
+}
+
+/* Container principal */
+.main-content {
+    background-color: var(--color-secondary);
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Header */
+.header-banner {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-secondary); /* Fundo para não sumir atrás do conteúdo */
+    z-index: 5; /* Coloca a imagem abaixo do título */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header-banner img {
+    max-width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+}
+
+
+/* Título */
+.main-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-secondary); /* Fundo para o título não sumir atrás do conteúdo */
+    padding: 10px 0;
+    z-index: 10; /* Garante que o título fique sobre o restante do conteúdo */
+}
+
+
+/* Seção de entrada */
+.input-section {
+    position: sticky;
+    top: 100px; /* Ajuste conforme necessário para que o título e a imagem não se sobreponham */
+    background-color: var(--color-secondary); /* Fundo para manter o contraste */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    margin-top: -20px;
+}
+
+/* Título da seção de entrada */
+.section-title {
+    margin-bottom: 20px; /* Isso dá um pequeno espaço abaixo do título */
+}
+
+
+/* Entrada de nome */
+.input-name {
+    width: 70%;
+    padding: 12px;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-name:focus {
+    border-color: var(--color-accent);
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-wrapper button {
+    margin-left: 10px;
+}
+
+/* Botão de adicionar */
+.button-add {
+    background-color: var(--color-button);
+    color: var(--color-white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+    transition: background 0.3s;
+}
+
+.button-add:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Lista de amigos rolante */
+#listaAmigos {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+    max-height: 200px; /* Defina a altura máxima da lista */
+    overflow-y: auto; /* Ativa a rolagem vertical */
+    border: 1px solid #ccc; /* Adiciona uma borda para destacar a lista */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: var(--color-white); /* Cor de fundo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombras sutis */
+}
+
+/* Estilo dos itens da lista */
+.name-item {
+    padding: 10px 15px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombras sutis */
+}
+
+/* Botão de remover */
+.remove-btn {
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #B71C1C;
+}
+
+/* Botão de sortear */
+.button-draw {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s;
+    
+    /* Garantir largura do botão e centralização do conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* O botão agora ocupa toda a largura disponível */
+    max-width: 300px; /* Tamanho máximo do botão, ajuste conforme necessário */
+    text-align: center;
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+}
+
+.button-draw img {
+    width: 24px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 24px; /* Ajuste o tamanho da imagem conforme necessário */
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.button-draw:hover {
+    background-color: #009688;
+}
+
+
+
+/* Resultado */
+#resultado {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-top: 20px;
+}
+
+/* Animação de fade-in */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
